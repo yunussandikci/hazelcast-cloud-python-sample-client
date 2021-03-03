@@ -21,8 +21,9 @@ if __name__ == "__main__":
     # Enable Hazelcast.Cloud configuration and set the token of your cluster.
     config.network_config.cloud_config.enabled = True
     config.network_config.cloud_config.discovery_token = "YOUR_CLUSTER_DISCOVERY_TOKEN"
+    config.statistics_enabled = True
     config.set_property("hazelcast.client.cloud.url", "YOUR_DISCOVERY_URL")
-
+    
     # Start a new Hazelcast client with this configuration.
     client = hazelcast.HazelcastClient(config)
 
