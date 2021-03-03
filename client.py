@@ -11,7 +11,7 @@ See: https://docs.hazelcast.cloud/docs/python-client
 """
 
 logging.basicConfig(level=logging.INFO)
-HazelcastCloudDiscovery._CLOUD_URL_BASE = "another-coordinator.hazelcast.cloud"
+HazelcastCloudDiscovery._CLOUD_URL_BASE = "YOUR_DISCOVERY_URL"
 client = hazelcast.HazelcastClient(
     cluster_name="YOUR_CLUSTER_NAME",
     cloud_discovery_token="YOUR_CLUSTER_DISCOVERY_TOKEN",
