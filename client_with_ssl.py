@@ -16,6 +16,7 @@ HazelcastCloudDiscovery._CLOUD_URL_BASE = "YOUR_DISCOVERY_URL"
 client = hazelcast.HazelcastClient(
     cluster_name="YOUR_CLUSTER_NAME",
     cloud_discovery_token="YOUR_CLUSTER_DISCOVERY_TOKEN",
+    statistics_enabled=True,
     ssl_enabled=True,
     ssl_cafile=abspath("ca.pem"),
     ssl_certfile=abspath("cert.pem"),
