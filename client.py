@@ -1,6 +1,7 @@
 import hazelcast
 import logging
 import random
+from hazelcast.discovery import HazelcastCloudDiscovery
 
 """
 This is boilerplate application that configures client to connect Hazelcast Cloud cluster.
@@ -10,7 +11,7 @@ See: https://docs.hazelcast.cloud/docs/python-client
 """
 
 logging.basicConfig(level=logging.INFO)
-
+HazelcastCloudDiscovery._CLOUD_URL_BASE = "another-coordinator.hazelcast.cloud"
 client = hazelcast.HazelcastClient(
     cluster_name="YOUR_CLUSTER_NAME",
     cloud_discovery_token="YOUR_CLUSTER_DISCOVERY_TOKEN",
